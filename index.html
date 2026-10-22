@@ -33,7 +33,6 @@
             justify-content: center;
         }
         
-        /* Contenedor del emulador en WebAssembly */
         wasmpsx-player {
             width: 100%;
             height: 100%;
@@ -51,31 +50,28 @@
         }
     </style>
 
-    <!-- Script oficial y estable del motor WASMpsx para navegadores -->
     <script src="https://js-emulators.github.io/wasmpsx/wasmpsx.js" defer></script>
 </head>
 <body>
 
     <h1>Crash Bandicoot 2: Cortex Strikes Back</h1>
-    <p class="subtitle">Versión web nativa optimizada para Google Chrome</p>
+    <p class="subtitle">Versión web optimizada para Google Chrome</p>
     
     <div class="game-wrapper">
-        <!-- Elemento reproductor del emulador web -->
         <wasmpsx-player id="playstation-game"></wasmpsx-player>
     </div>
 
     <div class="controls-box">
-        <p>🎮 <strong>Teclado:</strong> Flechas (Movimiento) | <strong>Z / X</strong> (Acciones) | <strong>Enter</strong> (Start) | <strong>Espacio</strong> (Select)</p>
-        <p>💡 <em>Tip: Conecta un mando USB o Bluetooth, haz clic dentro de la pantalla y presiona cualquier botón para jugar.</em></p>
+        <p>🎮 <strong>Teclado:</strong> Flechas (Movimiento) | <strong>Z / X</strong> (Acciones) | <strong>Enter</strong> (Start)</p>
+        <p>💡 <em>Haz clic dentro de la pantalla y presiona cualquier botón para jugar.</em></p>
     </div>
 
     <script>
-        // Carga automática del juego al iniciar la página
         window.addEventListener('DOMContentLoaded', () => {
             const player = document.getElementById('playstation-game');
-            // Aquí puedes apuntar a la URL pública donde alojes tu archivo .bin/.cue del juego
             if (player && typeof player.loadUrl === 'function') {
-                // player.loadUrl('url-de-tu-rom-del-juego.bin');
+                // Pega aquí abajo entre las comillas el enlace directo de descarga de tu archivo en Google Drive:
+                player.loadUrl('https://drive.google.com/file/d/1nwwGoyLBGe070qsrLOXqbTPmHgOFUP7Q/view?usp=sharing');
             }
         });
     </script>
